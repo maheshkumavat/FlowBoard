@@ -14,28 +14,6 @@
 - **Real-time Synchronization**: **Supabase Realtime** Postgres changes subscription (`supabase.channel('project-id').on('postgres_changes', ...)`). Live task moves, comments, and board updates reflect instantly across all connected users without a custom WebSocket server.
 - **AI Functions**: Isolated serverless functions for GitHub repo skill extraction (saving weighted skill tags into `profiles.skill_profile` jsonb) and Gemini AI goal decomposition.
 
----
-
-## Environment Configuration
-
-Configure your Supabase project credentials in your environment:
-
-```env
-# Supabase Configuration (Get from Supabase Dashboard -> Project Settings -> API)
-NEXT_PUBLIC_SUPABASE_URL="https://your-supabase-project.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
-SUPABASE_SERVICE_ROLE_KEY="your-supabase-service-role-key"
-
-# Gemini LLM API Key (For AI skill parsing & task breakdown)
-GEMINI_API_KEY="your-gemini-api-key"
-
-# GitHub OAuth Credentials (Configure in Supabase Dashboard -> Auth -> Providers -> GitHub)
-GITHUB_CLIENT_ID="your-github-client-id"
-GITHUB_CLIENT_SECRET="your-github-client-secret"
-```
-
----
-
 ## Supabase Database & RLS Setup
 
 1. Open your **Supabase Dashboard** -> **SQL Editor**.
